@@ -1,0 +1,7 @@
+# Shell scripts must stay LF-only - a CRLF shebang line breaks execution on
+# Linux/macOS outright ("No such file or directory"), regardless of whoever's
+# local git autocrlf setting adds/removes them on checkout.
+*.sh text eol=lf
+
+# Windows batch files are the opposite case - keep them CRLF.
+*.bat text eol=crlf
